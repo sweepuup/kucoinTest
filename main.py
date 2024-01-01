@@ -20,9 +20,9 @@ exchange = ccxt.kucoin({
 })
 
 #client = Market(url='https://api.kucoin.com')
-clientTrade = Trade(key='63e0bc0e8f06ad0001ac4b4e', secret='8c5c0c9c-6a21-4c11-9680-9f5ebcdd3e45', passphrase='iliketurtles', is_sandbox=False, url='https://api.kucoin.com')
-clientMarket = Market(key='63e0bc0e8f06ad0001ac4b4e', secret='8c5c0c9c-6a21-4c11-9680-9f5ebcdd3e45', passphrase='iliketurtles', is_sandbox=False, url='https://api.kucoin.com')
-clientClient = User(key='63e0bc0e8f06ad0001ac4b4e', secret='8c5c0c9c-6a21-4c11-9680-9f5ebcdd3e45', passphrase='iliketurtles', is_sandbox=False, url='https://api.kucoin.com')
+clientTrade = Trade(key=config.key, secret=config.secret, passphrase=config.passphrase, url='https://api.kucoin.com')
+clientMarket = Market(key=config.key, secret=config.secret, passphrase=config.passphrase, url='https://api.kucoin.com')
+clientClient = User(key=config.key, secret=config.secret, passphrase=config.passphrase, url='https://api.kucoin.com')
 
 USDT_funds = int(exchange.fetch_balance().get('USDT').get('free'))
 BTC_coins = float(exchange.fetch_balance().get('BTC').get('free'))
