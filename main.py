@@ -8,15 +8,11 @@ from flask import Flask, request
 import json
 from decimal import *
 
-api_key = '63e0bc0e8f06ad0001ac4b4e'
-api_secret = '8c5c0c9c-6a21-4c11-9680-9f5ebcdd3e45'
-api_passphrase = 'iliketurtles'
-
 exchange = ccxt.kucoin({
     'enableRateLimit': True,
-    'api_key': '63e0bc0e8f06ad0001ac4b4e',
-    'secret': '8c5c0c9c-6a21-4c11-9680-9f5ebcdd3e45',
-    'password': 'iliketurtles'
+    'api_key': config.key,
+    'secret': config.secret
+    'password': config.passphrase
 })
 
 #client = Market(url='https://api.kucoin.com')
